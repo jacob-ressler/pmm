@@ -98,7 +98,6 @@ loadBout = function() {
 }
 
 selectEntry = function(entry) {
-	// idk if this works lol, may need to be fixed later
 	$('.selected').removeClass('selected');
 	$(entry).addClass('selected');
 	
@@ -112,7 +111,7 @@ confirmWinner = function() {
 		return;
 	}
 	else if ($('.selected').length > 1) {
-		// multiple winners have been selected (this should never happen but better safe than sorry)
+		// multiple winners have been selected (this should never be able to happen, but better safe than sorry)
 		alert('Please select only one winner.');
 		return;
 	}
