@@ -1,8 +1,91 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
 body {
   background-color: black;
   color: white;
 }
 
-a {
-  color: lime;
+button {
+  color: black;
+  background-color: white;
+}
+button:hover {
+  cursor: pointer;
+}
+
+.top-gap {
+  height: 5px;
+  width: 100%;
+}
+
+#top-bar {
+  position: sticky;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "nav-left nav-middle nav-right";
+  height: 40px;
+  width: calc(100% - 5px);
+  background-color: black;
+}
+#top-bar .nav-item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  height: 100%;
+  border-radius: 20px;
+}
+#top-bar .nav-item:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#top-bar .nav-left {
+  display: flex;
+  justify-content: flex-start;
+}
+#top-bar .nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+#top-bar #hamburger {
+  margin-left: 0px;
+}
+#top-bar #logo {
+  padding-left: 5px;
+  padding-right: 20px;
+}
+#top-bar #logo:hover {
+  background-color: black;
+}
+#top-bar #logo img {
+  height: 36px;
+  padding-right: 4px;
+}
+#top-bar #logo div {
+  font-weight: 700;
+  font-size: 22px;
+}
+
+#side-bar {
+  position: absolute;
+  width: 300px;
+  height: calc(100vh - 40px - 10px);
+  background-color: #333;
 }/*# sourceMappingURL=main.css.map */

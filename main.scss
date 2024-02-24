@@ -1,8 +1,106 @@
+$top-bar-height: 40px;
+$top-bar-margin: 5px;
+$side-bar-width: 300px;
+$color-hover: white;
+$background-color-nav-hover: rgba(255, 255, 255, 0.2);
+$background-color-nav: black;
+
+* {
+	margin: 0;
+	padding: 0;
+	border: none;
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+	text-decoration: none;
+	list-style: none;
+	scroll-behavior: smooth;
+	line-height: 1.5;
+
+}
 body {
-    background-color: black;
-    color: white;
+	background-color: black;
+	color: white;
 }
 
-a {
-    color: lime;
+button {
+	color: black;
+	background-color: white;
+	&:hover {
+		cursor: pointer;
+	}
+}
+
+.top-gap {
+	height: 5px;
+	width: 100%;
+}
+
+#top-bar {
+	position: sticky;
+	top: 0;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: 'nav-left nav-middle nav-right';
+	height: $top-bar-height;
+	width: calc(100% - $top-bar-margin);
+	background-color: $background-color-nav;
+
+	
+	.nav-item {
+		display: flex;
+		flex-wrap: nowrap;
+		align-items: center;
+		color: white;
+		padding: 0 20px;
+		margin-left: 5px;
+		margin-right: 5px;
+		font-weight: 600;
+		font-size: 18px;
+		height: 100%;
+		border-radius: calc($top-bar-height / 2);
+
+		&:hover {
+			cursor: pointer;
+			color: $color-hover;
+			background-color: $background-color-nav-hover;
+		}
+	}
+
+	.nav-left {
+		display: flex;
+		justify-content: flex-start;
+	}
+
+	.nav-right {
+		display: flex;
+		justify-content: flex-end;
+	}
+
+	#hamburger {
+		margin-left: 0px;
+	}
+
+	#logo {
+		padding-left: 5px;
+		padding-right: 20px;
+
+		&:hover {
+			background-color: $background-color-nav;
+		}
+		img {
+			height: $top-bar-height - 4px;
+			padding-right: 4px;
+		}
+		div {
+			font-weight: 700;
+			font-size: 22px;
+		}
+	}
+}
+
+#side-bar {
+	position: absolute;
+	width: $side-bar-width;
+	height: calc(100vh - $top-bar-height - (2 * $top-bar-margin));
+	background-color: #333;
 }
