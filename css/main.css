@@ -15,12 +15,20 @@ body {
   color: white;
 }
 
-button {
+.button {
   color: black;
   background-color: white;
+  padding: 15px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 30px;
 }
-button:hover {
+.button:hover {
   cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
 }
 
 .top-gap {
@@ -30,6 +38,7 @@ button:hover {
 
 #top-bar {
   position: sticky;
+  z-index: 10;
   top: 0;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -85,7 +94,104 @@ button:hover {
 
 #side-bar {
   position: absolute;
-  width: 300px;
+  z-index: 11;
+  width: 250px;
   height: calc(100vh - 40px - 10px);
-  background-color: #333;
+  background-color: rgba(150, 30, 30, 0.9);
+  overflow-y: auto;
+  filter: drop-shadow(0 0 10px black);
+}
+#side-bar::-webkit-scrollbar {
+  width: 8px;
+}
+#side-bar::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 2px solid rgba(150, 30, 30, 0.9);
+  border-radius: 100px;
+}
+#side-bar::-webkit-scrollbar-track {
+  background-color: rgba(150, 30, 30, 0.9);
+}
+
+.overlay {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 0, 0, 0.5);
+}
+
+.side-bar-item-container .side-bar-item a {
+  color: white;
+}
+.side-bar-item-container .side-bar-item a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+.side-bar-item-container .side-bar-item a h1 {
+  font-size: 18px;
+}
+.side-bar-item-container .side-bar-item a p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.side-bar-item-container .side-bar-item .dropdown-toggle {
+  color: white;
+}
+.side-bar-item-container .side-bar-item .dropdown-toggle:hover {
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#bracket-container {
+  height: calc(100vh - 40px - 10px);
+  text-align: center;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  flex-flow: column;
+  align-items: center;
+}
+#bracket-container #bracket-info {
+  padding-bottom: 50px;
+}
+#bracket-container #bracket-info h1 {
+  font-size: 40px;
+}
+#bracket-container #bracket-info h2 {
+  font-size: 30px;
+}
+#bracket-container #bracket-info h3 {
+  font-size: 20px;
+  color: lightgrey;
+  font-style: italic;
+}
+#bracket-container #bout {
+  height: auto;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+#bracket-container #bout .entry {
+  max-width: 720px;
+  width: 40vw;
+  padding: 20px;
+  border-radius: 10px;
+  border: black 2px solid;
+}
+#bracket-container #bout .entry:hover {
+  cursor: pointer;
+  border: white 2px solid;
+}
+#bracket-container #bout .entry.selected {
+  background-color: white;
+  color: black;
+  border: white 2px solid;
+}
+#bracket-container #bout .entry iframe {
+  width: 75%;
+  height: calc(width / 16 * 9);
+  border: rgba(255, 255, 255, 0.5) 1px solid;
+  border-radius: 10px;
 }/*# sourceMappingURL=main.css.map */

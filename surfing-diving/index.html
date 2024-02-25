@@ -14,10 +14,17 @@
 </head>
 <body>
     <div class="top-gap"></div>
+    
     <section id="top-bar">
         <div class="nav-left">
-            <div id="hamburger" class="nav-item"><i class="fa-solid fa-bars"></i></div>
-            <a id="logo" class="nav-item" href="../"><img src="../img/pmm_logo_2.png" alt="HOME"><div>PMM</div></a></div>
+            <div id="hamburger" class="nav-item" onclick="toggleSidebar()">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <a id="logo" class="nav-item" href="../">
+                <img src="../img/pmm_logo_2.png" alt="HOME">
+                <div>PMM</div>
+            </a>
+        </div>
         <div class="nav-middle"></div>
         <div class="nav-right">
             <a href="" class="nav-item">BRACKETS</a>
@@ -27,21 +34,131 @@
 
     <div class="top-gap"></div>
 
-    <section id="side-bar">
+    <section id="side-bar" class="hidden">
         <!-- TODO -->
+        <div id="season-1" class="side-bar-item-container">
+            <div class="side-bar-item">
+                <a href="">
+                    <h1>Season 1 (2020)</h1>
+                    <p>Pokémon by Generation</p>
+                </a>
+                <div class="dropdown-toggle">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="side-bar-expandable-container">
+                <a href="" class="side-bar-expandable"></a>
+                <a href="" class="side-bar-expandable"></a>
+                <a href="" class="side-bar-expandable"></a>
+                <a href="" class="side-bar-expandable"></a>
+                <a href="" class="side-bar-expandable"></a>
+                <a href="" class="side-bar-expandable"></a>
+                <a href="" class="side-bar-expandable"></a>
+                <a href="" class="side-bar-expandable"></a>
+            </div>
+        </div>
+        <div id="season-2" class="side-bar-item-container">
+            <div class="side-bar-item">
+                <a href="">
+                    <h1>Season 2 (2021)</h1>
+                    <p>Gym Leaders by Generation</p>
+                </a>
+                <div class="dropdown-toggle">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="side-bar-expandable-container">
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+            </div>
+        </div>
+        <div id="season-3" class="side-bar-item-container">
+            <div class="side-bar-item">
+                <a href="">
+                    <h1>Season 3 (2022)</h1>
+                    <p>The Grab Bag</p>
+                </a>
+                <div class="dropdown-toggle">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="side-bar-expandable-container">
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+            </div>
+        </div>
+        <div id="season-4" class="side-bar-item-container">
+            <div class="side-bar-item">
+                <a href="">
+                    <h1>Season 4 (2023)</h1>
+                    <p>Pokémon Smash or Pass</p>
+                </a>
+                <div class="dropdown-toggle">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="side-bar-expandable-container">
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+            </div>
+        </div>
+        <div id="season-5" class="side-bar-item-container">
+            <div class="side-bar-item">
+                <a href="">
+                    <h1>Season 5 (2024)</h1>
+                    <p>Pokémon Soundtracks</p>
+                </a>
+                <div class="dropdown-toggle">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+            </div>
+            <div class="side-bar-expandable-container">
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+                <div class="side-bar-expandable"></div>
+            </div>
+        </div>
     </section>
 
+    <div class="overlay"></div>
+
     <section id="bracket-container">
-        <h1>Surfing/Diving Bracket</h1>
-        <h2 id="round">Round of 16</h2>
+        <div id="bracket-info">
+            <h1>Surfing/Diving Bracket</h1>
+            <h2 id="round">Round of 16</h2>
+            <h3 id="bout_number">Bout 1 of 8</h3>
+        </div>
         <div id="bout">
-            <div class="entry" onclick="selectEntry(this)">
+            <div id="entry1" class="entry" onclick="selectEntry(this)">
                 <iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/Z9vqvfxoRBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h3 id="entry1-name" class="entry-name">temp</h3>
+                <h4 id="entry1-name" class="entry-name">temp</h4>
             </div>
-            <div class="entry" onclick="selectEntry(this)">
+            <div id="entry2" class="entry" onclick="selectEntry(this)">
                 <iframe id="video2" width="560" height="315" src="https://www.youtube.com/embed/Z9vqvfxoRBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                <h3 id="entry2-name" class="entry-name">temp</h3>
+                <h4 id="entry2-name" class="entry-name">temp</h4>
             </div>
         </div>
 		<div class="button-container">

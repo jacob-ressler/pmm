@@ -89,6 +89,8 @@ loadBout = function() {
 			$('#video2').attr('src', bracket[round_number][bout_number * 2 + 1].url);
 			$('#entry2-name').text(bracket[round_number][bout_number * 2 + 1].name);
 		}
+
+		$('#bout_number').text('Bout ' + (bout_number + 1) + ' of ' + (bracket[round_number].length / 2));
 	}
 	else {
 		// load next round
@@ -103,6 +105,9 @@ selectEntry = function(entry) {
 	
 }
 
+clearSelection = function() {
+	$('.selected').removeClass('selected');
+}
 
 confirmWinner = function() {
 	if ($('.selected').length == 0) {
@@ -117,19 +122,34 @@ confirmWinner = function() {
 	}
 	else {
 		// winner has been selected
-		if ($('.selected').text() == bracket[round_number][bout_number * 2].name) {
+		if ($('#entry1').hasClass('selected')) {
 			// winner is entry 1
 			bracket[round_number + 1].push(bracket[round_number][bout_number * 2]);
+			clearSelection();
 		}
 		else {
 			// winner is entry 2
 			bracket[round_number + 1].push(bracket[round_number][bout_number * 2 + 1]);
+			clearSelection();
 		}
 
-		//console.log(bracket[round_number + 1]);
+		console.log(bracket[round_number + 1]);
 
 		// load next bout
 		bout_number++;
 		loadBout();
+
+	}
+}
+
+
+toggleSidebar = function() {
+	if ($('#side-bar').hasClass('hidden')) {
+		$('#side-bar').removeClass('hidden');
+		$('.overlay').css('visibility', 'visible');
+	}
+	else {
+		$('#side-bar').addClass('hidden');
+		$('.overlay').css('visibility', 'hidden');
 	}
 }
