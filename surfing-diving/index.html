@@ -34,111 +34,110 @@
 
     <div class="top-gap"></div>
 
-    <section id="side-bar" class="hidden">
-        <!-- TODO -->
+    <section id="side-bar" class="hidden" >
         <div id="season-1" class="side-bar-item-container">
             <div class="side-bar-item">
-                <a href="">
-                    <h1>Season 1 (2020)</h1>
-                    <p>Pokémon by Generation</p>
-                </a>
-                <div class="dropdown-toggle">
-                    <i class="fa-solid fa-caret-down"></i>
+                <div class="dropdown-toggle" onclick="toggleDropdown('season-1-dropdown')">
+                    <div class="dropdown-text">
+                        <h1>Season 1 (2020)</h1>
+                        <p>Pokémon by Generation</p>
+                    </div>
+                    <i id="season-1-dropdown-arrow" class="fa-solid fa-caret-down"></i>
                 </div>
             </div>
-            <div class="side-bar-expandable-container">
-                <a href="" class="side-bar-expandable"></a>
-                <a href="" class="side-bar-expandable"></a>
-                <a href="" class="side-bar-expandable"></a>
-                <a href="" class="side-bar-expandable"></a>
-                <a href="" class="side-bar-expandable"></a>
-                <a href="" class="side-bar-expandable"></a>
-                <a href="" class="side-bar-expandable"></a>
-                <a href="" class="side-bar-expandable"></a>
+            <div id="season-1-dropdown" class="side-bar-expandable-container hidden">
+                <a href="../s1/gen1.html" class="side-bar-expandable">Generation 1</a>
+                <a href="../s1/gen2.html" class="side-bar-expandable">Generation 2</a>
+                <a href="../s1/gen3.html" class="side-bar-expandable">Generation 3</a>
+                <a href="../s1/gen4.html" class="side-bar-expandable">Generation 4</a>
+                <a href="../s1/gen5.html" class="side-bar-expandable">Generation 5</a>
+                <a href="../s1/gen6.html" class="side-bar-expandable">Generation 6</a>
+                <a href="../s1/gen7.html" class="side-bar-expandable">Generation 7</a>
+                <a href="../s1/gen8.html" class="side-bar-expandable">Generation 8</a>
             </div>
         </div>
         <div id="season-2" class="side-bar-item-container">
             <div class="side-bar-item">
-                <a href="">
-                    <h1>Season 2 (2021)</h1>
-                    <p>Gym Leaders by Generation</p>
-                </a>
-                <div class="dropdown-toggle">
-                    <i class="fa-solid fa-caret-down"></i>
+                <div class="dropdown-toggle" onclick="toggleDropdown('season-2-dropdown')">
+                    <div class="dropdown-text">
+                        <h1>Season 2 (2021)</h1>
+                        <p>Gym Leaders</p>
+                    </div>
+                    <i id="season-2-dropdown-arrow" class="fa-solid fa-caret-down"></i>
                 </div>
             </div>
-            <div class="side-bar-expandable-container">
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
+            <div id="season-2-dropdown" class="side-bar-expandable-container hidden">
+                <a href="../s2/gen1.html" class="side-bar-expandable">Generation 1</a>
+                <a href="../s2/gen2.html" class="side-bar-expandable">Generation 2</a>
+                <a href="../s2/gen3.html" class="side-bar-expandable">Generation 3</a>
+                <a href="../s2/gen4.html" class="side-bar-expandable">Generation 4</a>
+                <a href="../s2/gen5.html" class="side-bar-expandable">Generation 5</a>
+                <a href="../s2/gen6.html" class="side-bar-expandable">Generation 6</a>
+                <a href="../s2/gen7.html" class="side-bar-expandable">Generation 7</a>
+                <a href="../s2/gen8.html" class="side-bar-expandable">Generation 8</a>
             </div>
         </div>
         <div id="season-3" class="side-bar-item-container">
             <div class="side-bar-item">
-                <a href="">
-                    <h1>Season 3 (2022)</h1>
-                    <p>The Grab Bag</p>
-                </a>
-                <div class="dropdown-toggle">
-                    <i class="fa-solid fa-caret-down"></i>
+                <div class="dropdown-toggle" onclick="toggleDropdown('season-3-dropdown')">
+                    <div class="dropdown-text">
+                        <h1>Season 3 (2022)</h1>
+                        <p>The Grab Bag</p>
+                    </div>
+                    <i id="season-3-dropdown-arrow" class="fa-solid fa-caret-down"></i>
                 </div>
             </div>
-            <div class="side-bar-expandable-container">
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
+            <div id="season-3-dropdown" class="side-bar-expandable-container hidden">
+                <a href="../s3/gen1.html" class="side-bar-expandable">Generation 1</a>
+                <a href="../s3/gen2.html" class="side-bar-expandable">Generation 2</a>
+                <a href="../s3/gen3.html" class="side-bar-expandable">Generation 3</a>
+                <a href="../s3/gen4.html" class="side-bar-expandable">Generation 4</a>
+                <a href="../s3/gen5.html" class="side-bar-expandable">Generation 5</a>
+                <a href="../s3/gen6.html" class="side-bar-expandable">Generation 6</a>
+                <a href="../s3/gen7.html" class="side-bar-expandable">Generation 7</a>
+                <a href="../s3/gen8.html" class="side-bar-expandable">Generation 8</a>
             </div>
         </div>
         <div id="season-4" class="side-bar-item-container">
             <div class="side-bar-item">
-                <a href="">
-                    <h1>Season 4 (2023)</h1>
-                    <p>Pokémon Smash or Pass</p>
-                </a>
-                <div class="dropdown-toggle">
-                    <i class="fa-solid fa-caret-down"></i>
+                <div class="dropdown-toggle" onclick="toggleDropdown('season-4-dropdown')">
+                    <div class="dropdown-text">
+                        <h1>Season 4 (2023)</h1>
+                        <p>Pokémon Smash or Pass</p>
+                    </div>
+                    <i id="season-4-dropdown-arrow" class="fa-solid fa-caret-down"></i>
                 </div>
             </div>
-            <div class="side-bar-expandable-container">
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
+            <div id="season-4-dropdown" class="side-bar-expandable-container hidden">
+                <a href="../s4/gen1.html" class="side-bar-expandable">Generation 1</a>
+                <a href="../s4/gen2.html" class="side-bar-expandable">Generation 2</a>
+                <a href="../s4/gen3.html" class="side-bar-expandable">Generation 3</a>
+                <a href="../s4/gen4.html" class="side-bar-expandable">Generation 4</a>
+                <a href="../s4/gen5.html" class="side-bar-expandable">Generation 5</a>
+                <a href="../s4/gen6.html" class="side-bar-expandable">Generation 6</a>
+                <a href="../s4/gen7.html" class="side-bar-expandable">Generation 7</a>
+                <a href="../s4/gen8.html" class="side-bar-expandable">Generation 8</a>
             </div>
         </div>
         <div id="season-5" class="side-bar-item-container">
             <div class="side-bar-item">
-                <a href="">
-                    <h1>Season 5 (2024)</h1>
-                    <p>Pokémon Soundtracks</p>
-                </a>
-                <div class="dropdown-toggle">
-                    <i class="fa-solid fa-caret-down"></i>
+                <div class="dropdown-toggle" onclick="toggleDropdown('season-5-dropdown')">
+                    <div class="dropdown-text">
+                        <h1>Season 5 (2024)</h1>
+                        <p>Pokémon Soundtracks</p>
+                    </div>
+                    <i id="season-5-dropdown-arrow" class="fa-solid fa-caret-down"></i>
                 </div>
             </div>
-            <div class="side-bar-expandable-container">
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
-                <div class="side-bar-expandable"></div>
+            <div id="season-5-dropdown" class="side-bar-expandable-container hidden">
+                <a href="../s5/gen1.html" class="side-bar-expandable">Generation 1</a>
+                <a href="../s5/gen2.html" class="side-bar-expandable">Generation 2</a>
+                <a href="../s5/gen3.html" class="side-bar-expandable">Generation 3</a>
+                <a href="../s5/gen4.html" class="side-bar-expandable">Generation 4</a>
+                <a href="../s5/gen5.html" class="side-bar-expandable">Generation 5</a>
+                <a href="../s5/gen6.html" class="side-bar-expandable">Generation 6</a>
+                <a href="../s5/gen7.html" class="side-bar-expandable">Generation 7</a>
+                <a href="../s5/gen8.html" class="side-bar-expandable">Generation 8</a>
             </div>
         </div>
     </section>

@@ -29,6 +29,7 @@ body {
 
 .hidden {
   visibility: hidden;
+  height: 0;
 }
 
 .top-gap {
@@ -97,7 +98,7 @@ body {
   z-index: 11;
   width: 250px;
   height: calc(100vh - 40px - 10px);
-  background-color: rgba(150, 30, 30, 0.9);
+  background-color: rgb(150, 20, 20);
   overflow-y: auto;
   filter: drop-shadow(0 0 10px black);
 }
@@ -106,11 +107,11 @@ body {
 }
 #side-bar::-webkit-scrollbar-thumb {
   background-color: white;
-  border: 2px solid rgba(150, 30, 30, 0.9);
+  border: 2px solid rgb(150, 20, 20);
   border-radius: 100px;
 }
 #side-bar::-webkit-scrollbar-track {
-  background-color: rgba(150, 30, 30, 0.9);
+  background-color: rgb(150, 20, 20);
 }
 
 .overlay {
@@ -123,26 +124,62 @@ body {
   background-color: rgba(50, 0, 0, 0.5);
 }
 
-.side-bar-item-container .side-bar-item a {
-  color: white;
-}
-.side-bar-item-container .side-bar-item a:hover {
-  background-color: rgba(255, 255, 255, 0.2);
-}
-.side-bar-item-container .side-bar-item a h1 {
-  font-size: 18px;
-}
-.side-bar-item-container .side-bar-item a p {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.7);
+.side-bar-item-container .side-bar-item {
+  display: flex;
+  height: 70px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5px;
 }
 .side-bar-item-container .side-bar-item .dropdown-toggle {
+  width: 100%;
+  height: 100%;
   color: white;
+  font-size: 24px;
+  text-align: center;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  align-items: center;
+  justify-content: center;
 }
 .side-bar-item-container .side-bar-item .dropdown-toggle:hover {
   cursor: pointer;
   background-color: rgba(255, 255, 255, 0.2);
 }
+.side-bar-item-container .side-bar-item .dropdown-toggle .dropdown-text {
+  padding-left: 20px;
+}
+.side-bar-item-container .side-bar-item .dropdown-toggle h1 {
+  text-align: left;
+  font-size: 18px;
+}
+.side-bar-item-container .side-bar-item .dropdown-toggle p {
+  text-align: left;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.7);
+}
+.side-bar-item-container .side-bar-expandable-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(155, 67, 67);
+}
+.side-bar-item-container .side-bar-expandable-container .side-bar-expandable {
+  font-size: 14px;
+  color: white;
+  width: 100%;
+  height: 30px;
+  padding: 5px;
+  text-align: left;
+  padding-left: 45px;
+}
+.side-bar-item-container .side-bar-expandable-container .side-bar-expandable:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
 #bracket-container {
   height: calc(100vh - 40px - 10px);
   text-align: center;

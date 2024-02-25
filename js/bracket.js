@@ -67,6 +67,8 @@ loadRound = function() {
 }
 
 loadBout = function() {
+	clearSelection();
+
 	if (bout_number < bracket[round_number].length / 2) {
 
 		if (bracket[round_number][bout_number * 2].name == 'bye' || bracket[round_number][bout_number * 2 + 1].name == 'bye') {
@@ -125,12 +127,10 @@ confirmWinner = function() {
 		if ($('#entry1').hasClass('selected')) {
 			// winner is entry 1
 			bracket[round_number + 1].push(bracket[round_number][bout_number * 2]);
-			clearSelection();
 		}
 		else {
 			// winner is entry 2
 			bracket[round_number + 1].push(bracket[round_number][bout_number * 2 + 1]);
-			clearSelection();
 		}
 
 		console.log(bracket[round_number + 1]);
@@ -152,4 +152,18 @@ toggleSidebar = function() {
 		$('#side-bar').addClass('hidden');
 		$('.overlay').css('visibility', 'hidden');
 	}
+}
+
+toggleDropdown = function(id) {
+		$('#' + id).toggleClass('hidden');
+		
+		if ($('#' + id + '-arrow').hasClass('fa-caret-down')) {
+			$('#' + id + '-arrow').removeClass('fa-caret-down');
+			$('#' + id + '-arrow').addClass('fa-caret-up');
+		}
+		else {
+			$('#' + id + '-arrow').removeClass('fa-caret-up');
+			$('#' + id + '-arrow').addClass('fa-caret-down');
+		}
+
 }
