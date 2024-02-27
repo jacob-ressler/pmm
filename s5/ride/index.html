@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Ride Themes - PokéMarch Madness</title>
+
+    <link rel="stylesheet" href="/css/main.css">
+
+    <script src="https://kit.fontawesome.com/35c0db93c5.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	<script src="/js/bracket.js"></script>
+    <script src="/js/sidebar.js"></script>
+    <script src="/js/topbar.js"></script>
+	
+</head>
+<body>
+    <div class="top-gap"></div>
+    
+    <section id="top-bar">
+        <script>createTopBar();</script>
+    </section>
+
+    <div class="top-gap"></div>
+
+    <section id="side-bar" class="hidden">
+        <script>createSidebar();</script>
+    </section>
+
+
+    <div class="overlay"></div>
+
+    <section id="bracket-container">
+        <div id="bracket-info">
+            <h1 id="bracket-title">Ride Themes</h1>
+            <h2 id="round">Round of 16</h2>
+            <h3 id="bout_number">Bout 1 of 8</h3>
+            <p>(Any byes will be processed automatically)</p>
+        </div>
+        <div id="bout">
+            <div id="entry1" class="entry" onclick="selectEntry(this)">
+                <iframe id="video1" width="560" height="315" src="https://www.youtube.com/embed/Z9vqvfxoRBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h4 id="entry1-name" class="entry-name">temp</h4>
+            </div>
+            <div id="entry2" class="entry" onclick="selectEntry(this)">
+                <iframe id="video2" width="560" height="315" src="https://www.youtube.com/embed/Z9vqvfxoRBg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                <h4 id="entry2-name" class="entry-name">temp</h4>
+            </div>
+        </div>
+		<div class="button-container">
+            <button class="button" onclick="confirmWinner()">Confirm Winner</button>
+		</div>
+    </section>
+
+	<script>getEntries('/data/ride.csv');</script>
+</body>
+</html>
