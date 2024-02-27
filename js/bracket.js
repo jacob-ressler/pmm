@@ -54,8 +54,9 @@ loadRound = function() {
 		console.log('bracket end');
 		console.log(bracket);
 		//cookies.set('bracket_results', JSON.stringify(bracket));
+		showcaseWinner();
+
 		return;
-		// TODO - end of bracket screen
 	}
 
 
@@ -142,28 +143,18 @@ confirmWinner = function() {
 	}
 }
 
-
-toggleSidebar = function() {
-	if ($('#side-bar').hasClass('hidden')) {
-		$('#side-bar').removeClass('hidden');
-		$('.overlay').css('visibility', 'visible');
-	}
-	else {
-		$('#side-bar').addClass('hidden');
-		$('.overlay').css('visibility', 'hidden');
-	}
-}
-
-toggleDropdown = function(id) {
-		$('#' + id).toggleClass('hidden');
-		
-		if ($('#' + id + '-arrow').hasClass('fa-caret-down')) {
-			$('#' + id + '-arrow').removeClass('fa-caret-down');
-			$('#' + id + '-arrow').addClass('fa-caret-up');
-		}
-		else {
-			$('#' + id + '-arrow').removeClass('fa-caret-up');
-			$('#' + id + '-arrow').addClass('fa-caret-down');
-		}
+showcaseWinner = function() {
+	$('#bracket-container').html('');
+	$('#bracket-container').attr('id', 'winner-showcase');
+	$('#winner-showcase').html(`
+        <h2>And the winner is...</h2>
+        <div id="entry-winner">
+            <iframe id="video-winner" width="560" height="315" src="${bracket[round_number][0].url}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <h4 id="winner-name">${bracket[round_number][0].name}</h4>
+        </div>
+        <div class="button-container">
+            <a href="/" class="button">Home</a>
+		</div>`
+	);
 
 }
