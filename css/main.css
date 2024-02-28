@@ -1,109 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  border: none;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-  text-decoration: none;
-  list-style: none;
-  scroll-behavior: smooth;
-  line-height: 1.5;
-}
-
-body {
-  background: linear-gradient(180deg, rgb(0, 0, 0) 20%, rgb(2, 0, 36) 80%, rgb(150, 20, 20) 95%, rgb(255, 0, 26) 100%) no-repeat;
-  color: white;
-}
-
-.hidden {
-  visibility: hidden;
-  height: 0;
-}
-
-.hidden2 {
-  display: none;
-  height: 0px;
-}
-
-.button {
-  color: black;
-  background-color: white;
-  padding: 15px 30px;
-  border-radius: 50px;
-  font-weight: 800;
-  font-size: 30px;
-  border-color: white;
-  border: 3px solid white;
-  background-color: black;
-  color: white;
-  filter: drop-shadow(0 0 5px black);
-}
-.button:hover {
-  cursor: pointer;
-  background-color: #e32d2d;
-}
-
-.top-gap {
-  height: 5px;
-  width: 100%;
-}
-
-#top-bar {
-  position: sticky;
-  z-index: 10;
-  top: 0;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "nav-left nav-middle nav-right";
-  height: 40px;
-  width: calc(100% - 5px);
-  background-color: black;
-}
-#top-bar .nav-item {
-  display: flex;
-  flex-wrap: nowrap;
-  align-items: center;
-  color: white;
-  padding: 0 20px;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-weight: 600;
-  font-size: 18px;
-  height: 100%;
-  border-radius: 20px;
-}
-#top-bar .nav-item:hover {
-  cursor: pointer;
-  color: white;
-  background-color: rgba(255, 255, 255, 0.2);
-}
-#top-bar .nav-left {
-  display: flex;
-  justify-content: flex-start;
-}
-#top-bar .nav-right {
-  display: flex;
-  justify-content: flex-end;
-}
-#top-bar #hamburger {
-  margin-left: 0px;
-}
-#top-bar #logo {
-  padding-left: 5px;
-  padding-right: 20px;
-}
-#top-bar #logo:hover {
-  background-color: black;
-}
-#top-bar #logo img {
-  height: 36px;
-  padding-right: 4px;
-}
-#top-bar #logo div {
-  font-weight: 700;
-  font-size: 22px;
-}
-
 #side-bar {
   overflow-y: scroll;
   position: absolute;
@@ -190,10 +84,71 @@ body {
   height: 30px;
   padding: 5px;
   text-align: left;
-  padding-left: 45px;
+  padding-left: 20px;
 }
 .side-bar-item-container .side-bar-expandable-container .side-bar-expandable:hover {
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.top-gap {
+  height: 5px;
+  width: 100%;
+}
+
+#top-bar {
+  position: sticky;
+  z-index: 10;
+  top: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "nav-left nav-middle nav-right";
+  height: 40px;
+  width: calc(100% - 5px);
+  background-color: black;
+}
+#top-bar .nav-item {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  color: white;
+  padding: 0 20px;
+  margin-left: 5px;
+  margin-right: 5px;
+  font-weight: 600;
+  font-size: 18px;
+  height: 100%;
+  border-radius: 20px;
+}
+#top-bar .nav-item:hover {
+  cursor: pointer;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+#top-bar .nav-left {
+  display: flex;
+  justify-content: flex-start;
+}
+#top-bar .nav-right {
+  display: flex;
+  justify-content: flex-end;
+}
+#top-bar #hamburger {
+  margin-left: 0px;
+}
+#top-bar #logo {
+  padding-left: 5px;
+  padding-right: 20px;
+}
+#top-bar #logo:hover {
+  background-color: black;
+}
+#top-bar #logo img {
+  height: 36px;
+  padding-right: 4px;
+}
+#top-bar #logo div {
+  font-weight: 700;
+  font-size: 22px;
 }
 
 #bracket-container {
@@ -356,4 +311,49 @@ body {
 #about-container .test {
   height: 300vh;
   font-size: 20px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+body {
+  background: linear-gradient(180deg, rgb(0, 0, 0) 20%, rgb(2, 0, 36) 80%, rgb(150, 20, 20) 95%, rgb(255, 0, 26) 100%) no-repeat;
+  color: white;
+}
+
+.hidden {
+  visibility: hidden;
+  height: 0;
+}
+
+.hidden2 {
+  display: none;
+  height: 0px;
+}
+
+.button {
+  color: black;
+  background-color: white;
+  padding: 15px 30px;
+  border-radius: 50px;
+  font-weight: 800;
+  font-size: 30px;
+  border-color: white;
+  border: 3px solid white;
+  background-color: black;
+  color: white;
+  filter: drop-shadow(0 0 5px black);
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #e32d2d;
 }/*# sourceMappingURL=main.css.map */
