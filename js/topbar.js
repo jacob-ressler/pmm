@@ -11,8 +11,8 @@ createTopBar = function(backdirs = '') {
         </div>
         <div class="nav-middle"></div>
         <div class="nav-right">
-            <a href="../brackets" class="nav-item">BRACKETS</a>
-            <a href="../videos" class="nav-item">VIDEOS</a>
+            <a href="${backdirs}brackets" class="nav-item">BRACKETS</a>
+            <a href="${backdirs}videos" class="nav-item">VIDEOS</a>
         </div>`
     );
 }
