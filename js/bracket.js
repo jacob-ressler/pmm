@@ -29,7 +29,12 @@ processData = function(data) {
 	let lines = data.split('\n');
 	bracket.push([]);
 	for (let i = 0; i < lines.length; i++) {
-		let line = lines[i].split(',');
+		let line = lines[i].split('\t');
+
+		if (line.length != 2) {
+			// not a line with name and url, so we can ignore it
+			continue;
+		}
 
 		// extract video id from url since yt uses a different url for embedding
 		// (works for both 'youtube.com' and 'youtu.be' urls)

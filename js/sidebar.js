@@ -95,17 +95,18 @@ createSidebar = function(backdirs = '') {
             </div>
         </div>
         <div id="season-5-dropdown" class="side-bar-expandable-container hidden">
-            <a href="${backdirs}s5/ride" class="side-bar-expandable">Ride Themes</a>
-            <a href="${backdirs}s5/wild-battles" class="side-bar-expandable">Wild Battles</a>
-            <a href="${backdirs}s5/rival-battles" class="side-bar-expandable">Rival Battles</a>
-            <a href="${backdirs}s5/gym-leader-battles" class="side-bar-expandable">Gym Leader Battles</a>
-            <a href="${backdirs}s5/elite-four-battles" class="side-bar-expandable">Elite Four Battles</a>
-            <a href="${backdirs}s5/champion-battles" class="side-bar-expandable">Champion Battles</a>
-            <a href="${backdirs}s5/legendary-mythical-battles" class="side-bar-expandable">Legendary &amp; Mythical Battles</a>
-            <a href="${backdirs}s5/evil-team-battles" class="side-bar-expandable">Evil Team Battles</a>
-            <a href="${backdirs}s5/routes-wild-areas" class="side-bar-expandable">Routes &amp; Wild Areas</a>
             <a href="${backdirs}s5/areas-of-interest" class="side-bar-expandable">Areas of Interest</a>
-            <a href="${backdirs}s5/towns" class="side-bar-expandable">Town Themes</a>
+            <a href="${backdirs}s5/champion-battles" class="side-bar-expandable">Champion Battles</a>
+            <a href="${backdirs}s5/elite-four-battles" class="side-bar-expandable">Elite Four Battles</a>
+            <a href="${backdirs}s5/evil-team-battles" class="side-bar-expandable">Evil Team Battles</a>
+            <a href="${backdirs}s5/gym-leader-battles" class="side-bar-expandable">Gym Leader Battles</a>
+            <a href="${backdirs}s5/legendary-mythical-battles" class="side-bar-expandable">Legendary &amp; Mythical Battles</a>
+            <a href="${backdirs}s5/ride" class="side-bar-expandable">Ride Themes</a>
+            <a href="${backdirs}s5/rival-battles" class="side-bar-expandable">Rival Battles</a>
+            <a href="${backdirs}s5/routes-wild-areas" class="side-bar-expandable">Routes &amp; Wild Areas</a>
+            <a href="${backdirs}s5/towns" class="side-bar-expandable">Towns</a>
+            <a href="${backdirs}s5/trainer-battles" class="side-bar-expandable">Trainer Battles</a>
+            <a href="${backdirs}s5/wild-battles" class="side-bar-expandable">Wild Battles</a>
         </div>
     </div>
     <div id= "side-bar-bottom"></div>`
