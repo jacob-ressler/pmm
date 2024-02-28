@@ -14,7 +14,7 @@ let bout_number = 0;
 getEntries = function(filename) {
 	$.ajax({
 		type: "GET",
-		url: '../data/' + filename,
+		url: '../../data/' + filename,
 		dataType: "text",
 		success: function (data) {
 			processData(data);
