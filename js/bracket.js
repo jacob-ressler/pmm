@@ -14,7 +14,7 @@ let bout_number = 0;
 getEntries = function(filename) {
 	$.ajax({
 		type: "GET",
-		url: filename,
+		url: '../data/' + filename,
 		dataType: "text",
 		success: function (data) {
 			processData(data);
@@ -153,7 +153,7 @@ showcaseWinner = function() {
             <h4 id="winner-name">${bracket[round_number][0].name}</h4>
         </div>
         <div class="button-container">
-            <a href="/" class="button">Home</a>
+            <a href="../../" class="button">Home</a>
 		</div>`
 	);
 
