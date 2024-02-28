@@ -105,12 +105,12 @@ body {
 }
 
 #side-bar {
+  overflow-y: scroll;
   position: absolute;
   z-index: 11;
   width: 250px;
   height: calc(100vh - 40px - 10px);
   background-color: rgb(150, 20, 20);
-  overflow-y: auto;
   filter: drop-shadow(0 0 10px black);
 }
 #side-bar::-webkit-scrollbar {
@@ -122,7 +122,7 @@ body {
   border-radius: 100px;
 }
 #side-bar::-webkit-scrollbar-track {
-  background-color: rgb(150, 20, 20);
+  background-color: rgba(0, 0, 0, 0);
 }
 #side-bar #side-bar-bottom {
   height: 30px;
@@ -318,21 +318,42 @@ body {
 }
 
 #about-container {
+  overflow-y: scroll;
   height: calc(100vh - 40px - 10px);
   width: 100%;
-  overflow-y: scroll;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 }
 #about-container::-webkit-scrollbar {
   width: 8px;
 }
 #about-container::-webkit-scrollbar-thumb {
   background-color: white;
-  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid black;
   border-radius: 100px;
 }
 #about-container::-webkit-scrollbar-track {
   background-color: rgba(0, 0, 0, 0);
 }
+#about-container h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 50px;
+}
+#about-container h2 {
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+#about-container p {
+  font-size: 20px;
+  width: 60%;
+  margin-bottom: 15px;
+}
 #about-container .test {
   height: 300vh;
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */
