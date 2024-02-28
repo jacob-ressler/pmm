@@ -4,8 +4,8 @@ createTopBar = function(backdirs = '') {
             <div id="hamburger" class="nav-item" onclick="toggleSidebar()">
                 <i class="fa-solid fa-bars"></i>
             </div>
-            <a id="logo" class="nav-item" href="../">
-                <img src="../img/pmm_logo_2.png" alt="HOME">
+            <a id="logo" class="nav-item" href="${backdirs}">
+                <img src="${backdirs}img/pmm_logo_2.png" alt="HOME">
                 <div>PMM</div>
             </a>
         </div>
