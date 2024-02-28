@@ -5,14 +5,14 @@ createTopBar = function(backdirs = '') {
                 <i class="fa-solid fa-bars"></i>
             </div>
             <a id="logo" class="nav-item" href="${backdirs}">
-                <img src="${backdirs}/img/pmm_logo_2.png" alt="HOME">
+                <img src="${backdirs}img/pmm_logo_2.png" alt="HOME">
                 <div>PMM</div>
             </a>
         </div>
         <div class="nav-middle"></div>
         <div class="nav-right">
-            <a href="${backdirs}/brackets" class="nav-item">BRACKETS</a>
-            <a href="${backdirs}/videos" class="nav-item">VIDEOS</a>
+            <a href="${backdirs}brackets" class="nav-item">BRACKETS</a>
+            <a href="${backdirs}videos" class="nav-item">VIDEOS</a>
         </div>`
     );
 }
