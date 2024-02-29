@@ -12,10 +12,11 @@ let round_number = 0;
 let bout_number = 0;
 let bracketName = 's5-ride-themes';
 
-const bracketTitle = $('#bracket-title').text()
+let bracketTitle;
 
 getEntries = function(filename) {
 	bracketName = filename.split('.')[0];
+	bracketTitle = $('#bracket-title').text();
 
 	$.ajax({
 		type: "GET",
