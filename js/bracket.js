@@ -388,7 +388,7 @@ viewBracket = function() {
 
 
 	// 5 - Create bracket title and subtitle (top right)
-	title = getTitle(bracketName);
+	title = getTitle();
 	ctx.font = titleFont;
 	ctx.fillStyle = 'white';
 	ctx.textAlign = 'right';
@@ -487,20 +487,8 @@ getHeight = function(ctx, text) {
 }
 
 
-getTitle = function(filename) {
-	let words = filename.split('-');
-	let title = '';
-	for (let i = 1; i < words.length; i++) {
-		let underscores = words[i].split('_');
-		for (let j = 0; j < underscores.length; j++) {
-			words[i] = underscores[j];
-			words[i] = j < underscores.length - 1 ? words[i] + '/' : words[i];
-		}
-		title += words[i].toUpperCase();
-		title = i < words.length - 1 ? title + ' ' : title;
-	}
-
-	return title;
+getTitle = function() {
+	return $('#bracket-title').text().toUpperCase();
 }
 
 
