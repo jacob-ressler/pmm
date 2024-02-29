@@ -12,6 +12,8 @@ let round_number = 0;
 let bout_number = 0;
 let bracketName = 's5-ride-themes';
 
+const bracketTitle = $('#bracket-title').text()
+
 getEntries = function(filename) {
 	bracketName = filename.split('.')[0];
 
@@ -488,7 +490,7 @@ getHeight = function(ctx, text) {
 
 
 getTitle = function() {
-	return $('#bracket-title').text().toUpperCase();
+	return bracketTitle.toUpperCase();
 }
 
 
