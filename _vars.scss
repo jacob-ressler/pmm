@@ -10,9 +10,28 @@ $bout-hover: rgba(150, 20, 20, 0.3);
 
 
 @mixin main-y-scroll ($thumb-border-color: black, $thumb-border-width: 1px) {
-	overflow-y: scroll;
+	overflow-y: auto;
+
 	&::-webkit-scrollbar {
 		width: 8px;
+	}
+	
+	&::-webkit-scrollbar-thumb {
+		background-color: white;
+		border: $thumb-border-width solid $thumb-border-color;
+		border-radius: 100px;
+	}
+	
+	&::-webkit-scrollbar-track {
+		background-color: rgba(0,0,0,0)
+	}
+}
+
+@mixin main-x-scroll ($thumb-border-color: black, $thumb-border-width: 1px) {
+	overflow-x: auto;
+
+	&::-webkit-scrollbar {
+		height: 8px;
 	}
 	
 	&::-webkit-scrollbar-thumb {

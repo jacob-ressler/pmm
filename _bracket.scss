@@ -136,4 +136,87 @@
 		filter: drop-shadow(0 0 5px black);
 		margin-bottom: 70px;
 	}
+	
+	.button-container {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 20px;
+	}
 }
+
+
+#overlay2 {
+	z-index: 12;
+	visibility: hidden;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(50, 0, 0, 0.5);
+
+	display: grid;
+	justify-content: center;
+	align-items: center;
+
+	grid-template-columns: 1fr 60% 1fr;
+	grid-template-rows: 1fr 70% 1fr;
+	grid-template-areas: 
+		'clickable1 clickable3 clickable2' 
+		'clickable1 canvas-area clickable2'
+		'clickable1 clickable4 clickable2';
+
+
+	#canvas-container {
+		grid-area: canvas-area;
+		@include vars.main-y-scroll();
+		@include vars.main-x-scroll();
+		display: flex;
+		width: 100%;
+		height: 100%;
+		justify-content: flex-start;
+		align-items: flex-start;
+		filter: drop-shadow(0 0 10px black);
+		flex-direction: column;
+	
+		#bracket-canvas {
+			z-index: 20;
+			border: 1px solid white;
+		}
+	}
+	
+	
+	.clickable1 {
+		grid-area: clickable1;
+		width: 100%;
+		height: 100%;
+	}
+	.clickable2 {
+		grid-area: clickable2;
+		width: 100%;
+		height: 100%;
+	}
+	.clickable3 {
+		grid-area: clickable3;
+		width: 100%;
+		height: 100%;
+	}
+	.clickable4 {
+		grid-area: clickable4;
+		width: 100%;
+		height: 100%;
+	
+		p {
+			z-index: 21;
+			margin-top: 5px;
+			color: white;
+			font-size: 20px;
+			font-weight: 700;
+			filter: drop-shadow(0 0 5px black);
+		}
+	}
+}
+
+
+

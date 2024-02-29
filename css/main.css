@@ -1,5 +1,5 @@
 #side-bar {
-  overflow-y: scroll;
+  overflow-y: auto;
   position: absolute;
   z-index: 11;
   width: 250px;
@@ -271,9 +271,98 @@
   filter: drop-shadow(0 0 5px black);
   margin-bottom: 70px;
 }
+#winner-showcase .button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+#overlay2 {
+  z-index: 12;
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(50, 0, 0, 0.5);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: 1fr 60% 1fr;
+  grid-template-rows: 1fr 70% 1fr;
+  grid-template-areas: "clickable1 clickable3 clickable2" "clickable1 canvas-area clickable2" "clickable1 clickable4 clickable2";
+}
+#overlay2 #canvas-container {
+  grid-area: canvas-area;
+  overflow-y: auto;
+  overflow-x: auto;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: flex-start;
+  align-items: flex-start;
+  filter: drop-shadow(0 0 10px black);
+  flex-direction: column;
+}
+#overlay2 #canvas-container::-webkit-scrollbar {
+  width: 8px;
+}
+#overlay2 #canvas-container::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100px;
+}
+#overlay2 #canvas-container::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+#overlay2 #canvas-container::-webkit-scrollbar {
+  height: 8px;
+}
+#overlay2 #canvas-container::-webkit-scrollbar-thumb {
+  background-color: white;
+  border: 1px solid black;
+  border-radius: 100px;
+}
+#overlay2 #canvas-container::-webkit-scrollbar-track {
+  background-color: rgba(0, 0, 0, 0);
+}
+#overlay2 #canvas-container #bracket-canvas {
+  z-index: 20;
+  border: 1px solid white;
+}
+#overlay2 .clickable1 {
+  grid-area: clickable1;
+  width: 100%;
+  height: 100%;
+}
+#overlay2 .clickable2 {
+  grid-area: clickable2;
+  width: 100%;
+  height: 100%;
+}
+#overlay2 .clickable3 {
+  grid-area: clickable3;
+  width: 100%;
+  height: 100%;
+}
+#overlay2 .clickable4 {
+  grid-area: clickable4;
+  width: 100%;
+  height: 100%;
+}
+#overlay2 .clickable4 p {
+  z-index: 21;
+  margin-top: 5px;
+  color: white;
+  font-size: 20px;
+  font-weight: 700;
+  filter: drop-shadow(0 0 5px black);
+}
 
 #about-container {
-  overflow-y: scroll;
+  overflow-y: auto;
   height: calc(100vh - 40px - 10px);
   width: 100%;
   display: flex;
@@ -356,4 +445,22 @@ body {
 .button:hover {
   cursor: pointer;
   background-color: #e32d2d;
+}
+
+#footer {
+  color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  bottom: 5px;
+  right: 10px;
+  text-align: right;
+  font-size: 12px;
+}
+#footer a {
+  color: inherit;
+  text-decoration: underline;
+  opacity: inherit;
+}
+#footer a:hover {
+  cursor: pointer;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
