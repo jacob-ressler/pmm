@@ -1,3 +1,5 @@
+
+// TODO - remove comment tags once Brackets and Videos pages are set up. Maybe drop the Brackets page since it could be unnecessarily redundant.
 createTopBar = function(backdirs = '') {
     $('#top-bar').html(`
     <div class="nav-left">
@@ -11,8 +13,11 @@ createTopBar = function(backdirs = '') {
         </div>
         <div class="nav-middle"></div>
         <div class="nav-right">
+            <!-- TODO - remove comment tags once Brackets and Videos pages are set up. Maybe drop the Brackets page since it could be unnecessarily redundant. -->
+            <!--
             <a href="${backdirs}brackets" class="nav-item">BRACKETS</a>
             <a href="${backdirs}videos" class="nav-item">VIDEOS</a>
+            -->
         </div>`
     );
 }
