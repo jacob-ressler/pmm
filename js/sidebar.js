@@ -1,5 +1,7 @@
 createSidebar = function(backdirs = '') {
     $('#side-bar').html(`        
+    <!-- FIXME - remove comment tags after Seasons 1-4 have working brackets -->
+    <!--
     <div id="season-1" class="side-bar-item-container">
         <div class="side-bar-item">
             <div class="dropdown-toggle" onclick="toggleDropdown('season-1-dropdown')">
@@ -84,6 +86,8 @@ createSidebar = function(backdirs = '') {
             <a href="${backdirs}s4/gen8" class="side-bar-expandable">Generation 8</a>
         </div>
     </div>
+    -->
+
     <div id="season-5" class="side-bar-item-container">
         <div class="side-bar-item">
             <div class="dropdown-toggle" onclick="toggleDropdown('season-5-dropdown')">
