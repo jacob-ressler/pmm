@@ -74,8 +74,8 @@ createSidebar = function(backdirs = '') {
             </div>
         </div>
         <div id="season-4-dropdown" class="side-bar-expandable-container hidden">
-            <a href="${backdirs}s4/gen2" class="side-bar-expandable">Generation 2</a>
             <a href="${backdirs}s4/gen1" class="side-bar-expandable">Generation 1</a>
+            <a href="${backdirs}s4/gen2" class="side-bar-expandable">Generation 2</a>
             <a href="${backdirs}s4/gen3" class="side-bar-expandable">Generation 3</a>
             <a href="${backdirs}s4/gen4" class="side-bar-expandable">Generation 4</a>
             <a href="${backdirs}s4/gen5" class="side-bar-expandable">Generation 5</a>
@@ -101,6 +101,7 @@ createSidebar = function(backdirs = '') {
             <a href="${backdirs}s5/evil-team-battles" class="side-bar-expandable">Evil Team Battles</a>
             <a href="${backdirs}s5/gym-leader-battles" class="side-bar-expandable">Gym Leader Battles</a>
             <a href="${backdirs}s5/legendary-mythical-battles" class="side-bar-expandable">Legendary &amp; Mythical Battles</a>
+            <a href="${backdirs}s5/mystery-dungeons" class="side-bar-expandable">Mystery Dungeons</a>
             <a href="${backdirs}s5/npc-themes" class="side-bar-expandable">NPC Themes</a>
             <a href="${backdirs}s5/ride-themes" class="side-bar-expandable">Ride Themes</a>
             <a href="${backdirs}s5/rival-battles" class="side-bar-expandable">Rival Battles</a>
