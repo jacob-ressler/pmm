@@ -49,6 +49,7 @@ processData = function(data) {
 		yt_id = yt_id.split('&')[0];
 		yt_id = yt_id.split('v=');
 		yt_id = yt_id[yt_id.length - 1];
+		yt_id = yt_id.split('?')[0];
 		yt_id = yt_id.split('\r')[0];
 		
 		bracket[0].push(new Entry(line[0], 'https://youtube.com/embed/' + yt_id));
