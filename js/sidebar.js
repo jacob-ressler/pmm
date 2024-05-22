@@ -100,7 +100,8 @@ createSidebar = function(backdirs = '') {
                 <i id="season-5-dropdown-arrow" class="fa-solid fa-caret-down"></i>
             </div>
         </div>
-        <div id="season-5-dropdown" class="side-bar-expandable-container hidden">
+        </div>
+        <-- <div id="season-5-dropdown" class="side-bar-expandable-container hidden">
             <a href="${backdirs}s5/areas-of-interest" class="side-bar-expandable">Areas of Interest</a>
             <a href="${backdirs}s5/champion-battles" class="side-bar-expandable">Champion Battles</a>
             <a href="${backdirs}s5/elite-four-battles" class="side-bar-expandable">Elite Four Battles</a>
@@ -116,8 +117,16 @@ createSidebar = function(backdirs = '') {
             <a href="${backdirs}s5/trainer-battles" class="side-bar-expandable">Trainer Battles</a>
             <a href="${backdirs}s5/wild-battles" class="side-bar-expandable">Wild Battles</a>
             <a href="${backdirs}s5/miscellaneous" class="side-bar-expandable">Miscellaneous Tracks</a>
-            </div>
-    </div>
+        </div> -->
+        <div id="season-5-dropdown" class="side-bar-expandable-container hidden">
+            <a href="${backdirs}s5/champion-battles" class="side-bar-expandable">Champion Battles</a>
+            <a href="${backdirs}s5/elite-four-battles" class="side-bar-expandable">Elite Four Battles</a>
+            <a href="${backdirs}s5/gym-leader-battles" class="side-bar-expandable">Gym Leader Battles</a>
+            <a href="${backdirs}s5/rival-battles" class="side-bar-expandable">Rival Battles</a>
+            <a href="${backdirs}s5/towns" class="side-bar-expandable">Towns</a>
+            <a href="${backdirs}s5/trainer-battles" class="side-bar-expandable">Trainer Battles</a>
+            <a href="${backdirs}s5/wild-battles" class="side-bar-expandable">Wild Battles</a>
+        </div>
     <div id= "side-bar-bottom"></div>`
     );
     
